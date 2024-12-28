@@ -10,13 +10,6 @@ def gen_password():
     password_entry.delete(0, END)
     password_entry.insert(0, password)
 
-def open_my_ytchannel():
-    webbrowser.open_new("https://www.youtube.com/channel/UCewCz7fGPtgrgTGL63hBHBw")
-
-def open_my_twchannel():
-    webbrowser.open_new("https://www.twitch.tv/luk2487")
-
-
 #make the window
 window = Tk()
 window.title("Password Generator - free , open_source")
@@ -70,11 +63,6 @@ menu_bar = Menu(window)
 file_menu = Menu(menu_bar, tearoff=0)
 file_menu.add_command(label="quit", command=quit)
 menu_bar.add_cascade(label="File", menu=file_menu)
-
-credit_menu = Menu(menu_bar, tearoff=0)
-credit_menu.add_command(label="Luk.'s YT Channel", command=open_my_ytchannel)
-credit_menu.add_command(label="Luk.'s Twitch Channel", command=open_my_twchannel)
-menu_bar.add_cascade(label="Credits", menu=credit_menu)
 
 window.config(menu=menu_bar)
 
